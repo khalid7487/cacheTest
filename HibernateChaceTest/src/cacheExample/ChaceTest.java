@@ -19,7 +19,7 @@ public class ChaceTest {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Employee emp=(Employee) session.get(Employee.class, 1);
-        emp.setEmp_name("Update Name");         
+       // emp.setEmp_name("Update Name");         
         session.getTransaction().commit();
         session.close();
         Session session2 = sessionFactory.openSession();

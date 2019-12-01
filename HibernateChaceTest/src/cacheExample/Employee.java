@@ -9,12 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-/**
- *
- * @author KHALID
- */
+
 @Entity
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 @NamedQuery(name = "Employee.byId", query = "from Employee where emp_id=?")
 @NamedNativeQuery(name="Employee.byName", query = "select * from employee where emp_name=?")
 @Table(name="employee")
