@@ -61,6 +61,8 @@ Contributor(s):
     <property name="hibernate.c3p0.idle_test_period">300</property>
     <!-- Disable the second-level cahe-->
     <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    <!--Echo all executed SQL to stdout-->
+    <property name="show_sql">true</property>
     <mapping class="cacheExample.Employee"/>
   </session-factory>
 </hibernate-configuration>
