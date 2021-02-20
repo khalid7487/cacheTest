@@ -43,9 +43,9 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_test?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">7487</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hb_student_tracker?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">hbstudent</property>
+    <property name="hibernate.connection.password">hbstudent</property>
     <!-- Minimum number of JDBC connections in the pool. Hibernate default:1 -->
     <property name="hibernate.c3p0.min_size">5</property>
     <!-- Maximum number of JDBC connections in the pool. Hibernate default:100 -->
@@ -58,6 +58,9 @@ Contributor(s):
     <property name="hibernate.c3p0.max_statements">50</property>
     <!--idle time in seconds before a connection is automatically validated.
     Hibernate default:0-->
+    <property name="hibernate.current_session_context_class">thread</property>
+
+    
     <property name="hibernate.c3p0.idle_test_period">300</property>
     <!-- Disable the second-level cahe-->
     <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
@@ -70,5 +73,7 @@ Contributor(s):
     <!--Echo all executed SQL to stdout-->
     <property name="show_sql">true</property>
     <mapping class="cacheExample.Employee"/>
+    
+
   </session-factory>
 </hibernate-configuration>
